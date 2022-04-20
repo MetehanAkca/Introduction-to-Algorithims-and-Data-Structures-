@@ -1,0 +1,21 @@
+Insertion Sort:
+    input: sequence of n numbesr denoted as {a1,a2,...an},or an array in general
+    output: a permutaion of given sequence denoted {a1',a2',...an'} such that the sequence is in
+    increasing order
+    *The elements to be sorted in the array.
+    *Efficient in sorting  small numbewr of elements.
+    *It is similar to orderingg your playing cards in your hand while drawing from the pile.
+    *It takes a parameter array A[1...n.Sorting is done !!in place!! meaning the algorithm rearranges the elements in the array
+    *Let index j indicate the current position of element to be sorted in parent array ( ranging from 2 to final position):
+    ** the sub array consisting of A[1..j-1] is already sorted as j-th element will always be plased(inserted into the
+    correct order beginning from insertion of 2nd element in regards to 1st element
+    **remaining sub array A[j+1..n] is still unsorted and will be inserted into the ordered sub-array
+    **With these ideas in mind we define A[1..j-1] as !!loop invariant!! meaning that it is always sorted in each
+    iteration of insertion.
+    *Loop ivariants are used in order to show that an algorithim is correct,to do so folowing conditions must be met:
+    **INITIALIZATION:Loop invariance is apriori to first iteration
+    **MAINTANANCE:Loop invariance is held true during each iteration
+    **TERMINATION:Upon the enfingof iterations,invariant gives us a property to justify the algorithim
+    *These steps are analogous to proof by induction where initialization corresponds to base case and
+    maintanance corresponds to inductive step.Termination step is when the induction stops in oppsiotion to infinite induction of mathemetical proofs.
+
