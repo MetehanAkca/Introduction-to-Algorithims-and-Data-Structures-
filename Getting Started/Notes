@@ -18,4 +18,28 @@ Insertion Sort:
     **TERMINATION:Upon the enfingof iterations,invariant gives us a property to justify the algorithim
     *These steps are analogous to proof by induction where initialization corresponds to base case and
     maintanance corresponds to inductive step.Termination step is when the induction stops in oppsiotion to infinite induction of mathemetical proofs.
+    *Now we discuss the correctness of the algorithim regarding these conditions:
+    **Initilization: (for j=2)
+    ***A[1,j-1] = A[1,1]  which is sorted since it only has one element;thus loop invariant
+    **Maintanance : (for 2<j<n)
+    ***For each j increment ,(j-1)-th element is inserted into ordered sub array.This ensures the ordered state of the
+    sub-array is not disturbed hence it is also loop invariant.
+    **Termination: at the end of the while loop we will have j>A.length and thus ordered subarray will be equal to entire array itself. It follows that
+    invarance was also not disturbed in this step.
+Pseudocode Coventions:
+    *Indentation coresponds to  code blocks such as loops and conditionals.
+    *It is assumed that loop counter (i,j,_ etc ...) retains its value after the loop.
+    *While depicting ranges, a to b denotes an inclusive range, implentations require attention to indexing at this point.
+    * comments are engulfed in 3 star operators ( *** ).
+    * a=b=c sets values of a and b to c.
+    * variables are local unless stated otherwise.
+    *Array elemnts are indexed by corner brackets. and multiple elements are denoted as tanges in curly brackets.
+    *Attributes are denoted as Object.attr
+    *Variables representing arrays of objects are treated as pointers:
+    **let y=x.attr1 if you set x.attr1 to different value,y will also be set to that value.
+    *Scopes are local unless stated otherwise
+    *booleans are SHORT CIRCUITING,meaning that in statement x (and/or ...etc.) y x is evaluated first if it renders
+    the whole statement true or false, y is not evaluated ata all
+
+
 

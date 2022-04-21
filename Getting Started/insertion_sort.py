@@ -11,15 +11,32 @@
 #     A[i+1] = key
 #
 
+
+# exercise 1:demonstrate insertion sort of increasing order for array [31,41,59,26,41,58
+
+
 def insertion_sort (array):
     for j in range(len(array)):
         key = array[j]
         i=j-1
-        while i > 0 and array[i] > key :
+        while i >= 0 and array[i] > key :
             array[i+1] = array[i]
             i -= 1
         array[i+1 ] = key
     return array
-array = [1,5,2,3,4]
+array = [31,41,59,26,41]
 insertion_sort(array)
 print(array)
+
+# exercise 2:modify the algorithm to sort for decreasing order and demonstrate funcionality.
+def insertion_sort_decreasing (array):
+    for j in range(len(array)):
+        key = array[j]
+        i=j-1
+        while i >= 0 and array[i] < key :
+            array[i+1] = array[i]
+            i -= 1
+        array[i+1] =key
+    return array
+
+print(insertion_sort_decreasing(array))
