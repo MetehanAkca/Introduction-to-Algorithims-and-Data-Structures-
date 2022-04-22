@@ -40,3 +40,27 @@ def insertion_sort_decreasing (array):
     return array
 
 print(insertion_sort_decreasing(array))
+
+
+# Consider the searching problem:
+#     Input: a sequence of n numbers and a value ven
+#     Output:an index i such than v=A[i] or NIL if such a number doesnt exist in sequence.
+#   write the pseudo code for linear search.Proove corectness using loop invariant
+"""
+for i = 1 to A.len
+    while A[i]<= v
+       if A[i] ==v:
+           return i
+           break
+    return NIL  
+    
+    PROOF:
+    Consider two sub-arrays A[1..i] and A[i+1 .. n]
+    Initiation: since array is a sequence all of it's elements are ordered hence so is the A[1..i] and A[i+1..n]
+    Mainttanance: throughout the loop as i increases the next element of the sequence is transferred from sub-array A[i+1..n] to A[1..i]
+    This step will not insert anything new thus not mess with the ordering.
+    Termination:As the loop ends integrity of the initial sequence was not disrupted via any sort of replacement or insertion.As a result,
+    loop invariance was satisified in all three steps.
+     
+"""
+
